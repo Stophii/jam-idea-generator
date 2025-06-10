@@ -22,6 +22,7 @@ const flavorProfiles: Record<string, string[]> = {
   children: ["children", "siblings", "twins", "son", "daughter", "parents", "youth"],
   action: ["action", "actions",  "flying", "jumping", "racing", "running", "swimming", "piloting", "gliding", "dashing", "teleporting"],
   concepts: ["concept", "concepts", "far", "close", "rich", "poor", "fat", "skinny", "big", "small", "lost", "found", "high", "low", "fast", "slow"],
+  things: ["thing", "things", "sony", "nintendo", "turbo", "unity", "unreal", "microsoft", "tesla", "apple", "google", "playstation", "xbox", "switch", "vr", "ai", "engine"],
 
 };
 
@@ -74,7 +75,6 @@ const themeSynonyms: Record<string, string[]> = {
   ],
   avarice: ["Avarice", "Greed", "Taxes", "Wealth", "Gold", "Hoard", "Capitalism", "Corruption", "Lust for Power", "Avarice"],
   children: ["Children", "Siblings", "Twins", "Son", "Daughter", "Parents", "Youth"],
-
 };
 
 const synonymToTheme: Record<string, string> = {};
@@ -241,6 +241,13 @@ const flavorHooks: Record<string, string[]> = {
     "switch between fast and slow worlds to solve paradoxes",
     "solve mysteries by finding what was once lost",
     "navigate relationships through the push and pull of near and far",
+  ],
+  things: [
+    "exploit glitches in a bootleg game engine to escape a simulation",
+    "race across corporate-sponsored realities to win a contract",
+    "hack together assets from rival engines to build your own game world",
+    "battle through levels themed after outdated tech and logos",
+    "build alliances between feuding consoles in a pixel war",
   ],
   generic: [],
 };
