@@ -2,7 +2,7 @@
 const flavorProfiles: Record<string, string[]> = {
   nature: ["nature", "plant", "forest", "root", "flower", "moss", "tree", "seed", "green"],
   death: ["death", "zombie", "undead", "corpse", "grave", "ghost", "decay", "rot", "perfect"],
-  magic: ["magic", "spell", "arcane", "rune", "sorcery", "mana", "ritual", "curse"],
+  magic: ["magic", "spell", "arcane", "rune", "sorcery", "mana", "ritual", "curse", "casting"],
   machine: ["machine", "robot", "metal", "circuit", "gear", "mech", "factory"],
   technology: ["technology", "code", "ai", "cyber", "data", "virtual", "system", "network"],
   deity: ["deity", "god", "divine", "celestial", "worship", "holy", "sacred", "pantheon", "afterlife"],
@@ -20,6 +20,8 @@ const flavorProfiles: Record<string, string[]> = {
   popculture: ["popculture", "meme", "viral", "influencer", "celebrity", "trend", "stream", "fandom", "stan", "hashtag"],
   avarice: ["avarice", "greed", "taxes", "wealth", "gold", "hoard", "capitalism", "corruption"],
   children: ["children", "siblings", "twins", "son", "daughter", "parents", "youth"],
+  action: ["action", "actions",  "flying", "jumping", "racing", "running", "swimming", "piloting", "gliding", "dashing", "teleporting"],
+  concepts: ["concept", "concepts", "far", "close", "rich", "poor", "fat", "skinny", "big", "small", "lost", "found", "high", "low", "fast", "slow"],
 
 };
 
@@ -59,7 +61,7 @@ const themeSynonyms: Record<string, string[]> = {
   retro: ["Retro", "Arcade", "CRT", "Joystick", "Classic", "Vintage", "Old School"],
   primitive: ["Primitive", "Stone", "Tribe", "Cave", "Stick", "Firestarter", "Spear", "Hunt", "Bones"],
   food: ["food", "Spaghetti", "Cake", "Meat", "Kitchen", "Chef", "Snack", "Meal", "Pizza", "Burger"],
-  women: ["Women", "Femininity", "Matriarch", "Goddess", "Daughter", "Queen", "Wife", "Sister", "Her", "Smut", "Smutty"],
+  women: ["Women", "Femininity", "Matriarch", "Goddess", "Daughter", "Queen", "Wife", "Sister", "Her", "Smut", "Smutty", "Purse"],
   destruction: ["Destruction", "Ruin", "Explosion", "Collapse", "Wreckage", "Shatter", "Blast", "Catastrophe", "Crash"],
   stressed: ["Stressed", "Anxiety", "Pressure", "Overwhelmed", "Panic", "Crashing", "Crashing Out", "Burnout", "Tension"],
   men: ["Men", "Masculinity", "Patriarch", "Father", "Brother", "Son", "He", "King", "Husband"],
@@ -225,6 +227,20 @@ const flavorHooks: Record<string, string[]> = {
     "collect toys to unlock childhood memories",
     "defend your blanket fort from imaginary monsters",
     "relive a summer adventure where everything felt magical",
+  ],
+  action: [
+    "dash through collapsing dimensions at breakneck speed",
+    "pilot a vehicle fueled by emotional energy",
+    "jump across timelines to undo your mistakes",
+    "glide past enemies in a world with no ground",
+    "teleport between dreams to escape danger",
+  ],
+  concepts: [
+    "explore the vast gap between rich and poor using strategic upgrades",
+    "play as a being who grows or shrinks based on your choices",
+    "switch between fast and slow worlds to solve paradoxes",
+    "solve mysteries by finding what was once lost",
+    "navigate relationships through the push and pull of near and far",
   ],
   generic: [],
 };
@@ -421,7 +437,7 @@ export function generateIdea(theme: string, genre: string): { title: string; des
 
 
   const titleIntros = [
-    "The", "Degenerate", "That", "Alabaster", "Our", "Their", "Nior", "Fabled",
+    "The", "Degenerate", "That", "Alabaster", "Our", "Their", "Noir", "Fabled",
     "Legend of the", "Curse of the", "Rise of the", "Call of the", "Remember the", "Damnable"
   ];
   const intro = titleIntros[Math.floor(Math.random() * titleIntros.length)];
